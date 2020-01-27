@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
+// Servicios
+import { ClubesService } from './services/clubes.service';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -23,7 +26,9 @@ import { ClubesComponent } from './components/clubes/clubes.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    ClubesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
