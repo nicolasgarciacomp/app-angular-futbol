@@ -1,13 +1,12 @@
 <h1>Clúbes <small>de Argentina</small></h1>
 <hr>
 <div class="card-columns">
-	<div class="card" *ngFor="let club of clubes">
+	<div class="card" *ngFor="let club of clubes; let i=index">
     	<img [src]="club.img" class="card-img-top" [alt]="club.nombre">
     	<div class="card-body">
       		<h5 class="card-title">{{club.nombre}}</h5>
-      		<p class="card-text">{{club.bio}}</p>
       		<p class="card-text"><small class="text-muted">{{club.fundacion}}</small></p>
-      		<button type="button" class="btn btn-outline-primary">Ver más...</button>
+      		<a [routerLink]="['/club', i]" class="btn btn-outline-primary">Ver más...</a>
     	</div>
   	</div>
 </div>
