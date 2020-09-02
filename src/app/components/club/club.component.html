@@ -1,4 +1,4 @@
-<h1>{{club.nombre}}  <small>{{club.fundacion}}</small></h1>
+<h1>{{club.nombre | uppercase}}  <small>{{club.fundacion}}</small></h1>
 <hr>
 <div class="row">
 	<div class="col-md-4">
@@ -9,9 +9,7 @@
 	<div class="col-md-8">
 		<h3>{{club.nombre}}</h3>
 		<hr>
-		<p>
-			{{club.bio}}
-		</p>
+		<p>{{club.bio}}</p>
 		<div>
 			<h3><small>Apodo:</small>  {{club.apodo}}</h3>
 		</div>

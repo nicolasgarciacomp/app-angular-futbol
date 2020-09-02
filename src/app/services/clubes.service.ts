@@ -242,6 +242,20 @@ export class ClubesService {
 		return this.clubes[idx];
 	}
 
+	buscarClubes(termino:string) {
+		let clubesArr:Club[] = [];
+		termino = termino.toLowerCase();
+
+		for(let club of this.clubes) {
+			let nombre = club.nombre.toLowerCase();
+			if(nombre.indexOf(termino) >= 0) {
+				clubesArr.push(club);
+			}
+		}
+
+		return clubesArr;
+	}
+
 }
 
 export interface Club {
