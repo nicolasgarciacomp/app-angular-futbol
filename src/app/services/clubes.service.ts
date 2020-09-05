@@ -246,9 +246,11 @@ export class ClubesService {
 		let clubesArr:Club[] = [];
 		termino = termino.toLowerCase();
 
-		for(let club of this.clubes) {
+		for(let i = 0; i < 30/*this.clubes.lenght*/; i++) {
+			let club = this.clubes[i];
 			let nombre = club.nombre.toLowerCase();
 			if(nombre.indexOf(termino) >= 0) {
+				club.idx = i;
 				clubesArr.push(club);
 			}
 		}
@@ -264,4 +266,5 @@ export interface Club {
 	img: string;
 	fundacion: string;
 	apodo: string;
+	idx?: number;
 };

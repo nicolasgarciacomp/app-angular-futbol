@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ClubesComponent } from './components/clubes/clubes.component';
 import { ClubComponent } from './components/club/club.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ClubComponent } from './components/club/club.component';
     HomeComponent,
     AboutComponent,
     ClubesComponent,
-    ClubComponent
+    ClubComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,

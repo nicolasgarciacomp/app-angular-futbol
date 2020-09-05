@@ -1,0 +1,21 @@
+<h1>Buscando: <small>{{termino}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="clubes.length == 0">
+	<div class="col-md-12">
+		<div class="alert alert-info" role="alert">
+			No existen resultados con el termino: {{termino}}
+		</div>
+	</div>
+</div>
+
+<div class="card-columns">
+	<div class="card" *ngFor="let club of clubes">
+    	<img [src]="club.img" class="card-img-top" [alt]="club.nombre">
+    	<div class="card-body">
+      		<h5 class="card-title">{{club.nombre}}</h5>
+      		<p class="card-text"><small class="text-muted">{{club.fundacion}}</small></p>
+      		<a [routerLink]="['/club', club.idx]" class="btn btn-outline-primary">Ver más...</a>
+    	</div>
+  	</div>
+</div>
